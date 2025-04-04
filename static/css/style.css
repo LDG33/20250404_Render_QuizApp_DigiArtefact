@@ -1,7 +1,7 @@
 
 /*stying content area*/
 .containerOne{
-    max-width:900px;
+    max-width:1000px;
     padding-left:100px;
     padding-right:100px;
     padding-top:100px;
@@ -12,7 +12,7 @@
 }
 
 .mainField{
-    width: 900px;
+    width: 1000px;
     height: 500px;
     margin-top:0px;
     margin-bottom:0px;
@@ -81,8 +81,3 @@ footer{
     font-size:32px;
 }
 
-
-canvas{
-    padding-right:50px;
-    padding-left:50px;
-}
