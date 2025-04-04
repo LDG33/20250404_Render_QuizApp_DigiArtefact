@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link href="{{ url_for('static', filename='bst/bootstrap.min.css')}}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet" />
+
+
+
+</head>
+<body>
+    <!--Home Page-->
+
+    {% include 'navigation.html' %}
+
+    <div class="mainField"> 
+
+    <section class="containerOne">
+    
+        <h1>About QuizApp</h1>
+        <p>QuizApp was developed as part of the Advanced Web Technology course 
+            at Edinburgh Napier University by Lukasz Galik, a student of this
+            institution. 
+        
+            The task was to develop a web app in Python and Python library Flask. 
+            The requirement was to demonstrate an ability to create a dynamic website
+            with the use of this technologies. 
+      
+            The mark/evaluation was taking account of the ammout of functionalities and 
+            quality of the code and a solution. The following functionalities have been applied:
+            - login/registration and connection to database
+            - quiz game that collects user scores
+            - results summary that uses javascript and html canvas element.
+       
+            Initially website has not been launched due to problems with university hosting
+            (as part of Advanced Web Technologies)
+            
+            Website has been deployed thorugh Render.com now as part of Portfolio coursework
+            for the second trimester 2024/2025.
+        </p>
+        
+
+    </section>
+
+    </div>
+
+     {% include 'footer.html' %}
+
+    <script src="{{ url_for('static', filename='/bst/bootstrap.bundle.min.js')}}"></script>
+</body></html>

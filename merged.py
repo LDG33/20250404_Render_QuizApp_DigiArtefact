@@ -21,6 +21,14 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 def intro():
         return render_template('index.html')
 
+@app.route("/about")
+def about():
+        return render_template('about.html')
+
+@app.route("/contact")
+def contact():
+        return render_template('contact.html')
+
 #connection to database <- OLD VERSION !!!!!! (today 20250328)
 #def get_db():
     #db = getattr(g, 'db', None)

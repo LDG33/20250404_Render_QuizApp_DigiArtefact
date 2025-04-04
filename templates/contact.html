@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link href="{{ url_for('static', filename='bst/bootstrap.min.css')}}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet" />
+
+
+
+</head>
+<body>
+    <!--Home Page-->
+
+    {% include 'navigation.html' %}
+
+    <div class="mainField"> 
+
+    <section class="containerOne">
+    
+        <h1>Contact QuizApp Author - Lukasz Galik</h1>
+        <br>
+        <p>
+            <br><br>
+            Please reach me at <b>luke.galik.work@gmail.com</b>
+            <br><br>
+            Alternatively call me on <b>07922657582</b>
+            <br><br>
+            Also more details about me at my portfolio page:
+            <b>www.lukaszgalik.com</b>
+        </p>
+
+
+    </section>
+
+    </div>
+
+     {% include 'footer.html' %}
+
+    <script src="{{ url_for('static', filename='/bst/bootstrap.bundle.min.js')}}"></script>
+</body></html>
