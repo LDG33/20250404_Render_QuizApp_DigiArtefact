@@ -80,3 +80,9 @@ footer{
     font-weight:bold;
     font-size:32px;
 }
+
+
+canvas{
+    padding-right:50px;
+    padding-left:50px;
+}
