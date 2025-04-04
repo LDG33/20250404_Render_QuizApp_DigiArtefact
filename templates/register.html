@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="{{ url_for('static', filename='bst/bootstrap.min.css')}}" rel="stylesheet" />
+        <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet" />
+    </head>    
+<body>
+
+    <!-- Registration Form -->
+
+    {% include 'navigation.html' %}
+
+    <section class="containerOne">
+
+
+        <form action="" method="POST" name="registrationForm">
+            
+            <label for="usernameReg">Provide a new Username:</label>
+            <input type="text" name="usernameReg" id="usernameReg"/>
+            
+            <br><br><label for="passwordReg">Provide Password:</label>
+            <input type="password" name="passwordReg" id="passwordReg"/>
+            
+            <br><br><label for="passwordReg2">Confirm Password:</label>
+            <input type="password" name="passwordReg2" id="passwordReg2"/>
+            
+            <br><br>
+
+            <input type="submit" name="submit" id="submit"/>
+
+        </form>
+
+        <br><br>
+        <p>{{messageReg}}</p>
+        <p><a href="/">Go Back To Start</a></p>
+
+    </section>
+
+    {% include 'footer.html' %}
+
+    <script src="{{ url_for('static', filename='/bst/bootstrap.bundle.min.js')}}"></script>
+</body></html>

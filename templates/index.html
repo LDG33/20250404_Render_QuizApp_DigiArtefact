@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link href="{{ url_for('static', filename='bst/bootstrap.min.css')}}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet" />
+
+
+
+</head>
+<body>
+    <!--Home Page-->
+
+    {% include 'navigation.html' %}
+
+    <section class="containerOne">
+    
+        <h1>Welcome to QuizApp</h1>
+        <p>To start playing quizzes you need to log in first</p>
+        <p>Please LogIn here: <a href="/login">Login Page</a></p>
+
+    </section>
+
+     {% include 'footer.html' %}
+
+    <script src="{{ url_for('static', filename='/bst/bootstrap.bundle.min.js')}}"></script>
+</body></html>

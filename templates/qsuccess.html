@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <link href="{{ url_for('static', filename='bst/bootstrap.min.css')}}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet" />
+
+    <style>
+        canvas{
+            border: 5px solid rgb(61, 61, 61);
+            background-image: linear-gradient(to bottom right, white, orange);
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Chart area with two separate canvases -->
+    
+    {% include 'navigation.html' %}
+
+    <section class="containerOne">
+
+        <h1>You have finished the quiz!</h1>
+        <p>
+            Your score was {{score}} answers correct
+        </p>
+
+        <a href="/">Back to the Start</a><br>
+        
+        <br><br>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                    <canvas id="canvas1">
+                    </canvas>
+                </div>
+                <br><br>
+                <div class="col-sm-6 col-md-6">
+                    <canvas id="canvas2">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- javascript code to dynamically change the content of the canvas1 -->
+        <script type="text/javascript">
+            var canvas1 = document.getElementById('canvas1');
+
+
+            canvas1.width = 350;
+            canvas1.height = 200;
+
+            var answers = "{{score}}";
+            var negativeAns = "{{negative}}";
+
+            var c = canvas1.getContext('2d');
+            c.translate(0, canvas1.height);
+            c.scale(1,-1);
+
+            c.fillStyle = 'rgba(255, 0, 0, 1)';
+            c.fillRect(250,0,50,50*negativeAns);
+
+            c.fillStyle = 'rgba(0, 255, 0, 1)';
+            c.fillRect(50,0,50,50*answers);
+
+            //c.translate(canvas.height, 0);
+            c.scale(1,-1);
+
+            c.fillStyle = 'rgba(0, 0, 0, 0.5)';
+
+            c.font = "12px Arial black";
+            c.fillText(" Wrong",250,0);
+
+            c.font = "12px Arial black";
+            c.fillText("Correct",50,0);
+
+        </script>
+
+        <!-- javascript code to dynamically change the content of the canvas2 -->
+        <script type="text/javascript">
+            var canvas2 = document.getElementById('canvas2');
+
+            canvas2.width = 350;
+            canvas2.height = 200;
+
+            //var answers = "{{score}}";
+            //var negativeAns = "{{negative}}";
+            var q1 = "{{q1}}";
+            var q2 = "{{q2}}";
+            var q3 = "{{q3}}";
+
+            var c = canvas2.getContext('2d');
+            c.translate(0, canvas2.height);
+            c.scale(1,-1);
+
+            if(q1>0)
+            {
+            c.fillStyle = 'rgba(0, 255, 0, 1)';
+            c.fillRect(50,0,50,50*q1);
+            c.scale(1,-1);
+            c.fillStyle = 'rgba(0, 0, 0, 0.5)';
+            c.font = "12px Arial";
+            c.fillText("Question1",50,0);
+            }
+            else{
+            c.fillStyle = 'rgba(255, 0, 0, 1)';
+            c.fillRect(50,0,50,50);
+            c.scale(1,-1);
+            c.fillStyle = 'rgba(0, 0, 0, 0.5)';
+            c.font = "12px Arial";
+            c.fillText("Question1",50,0);
+            }
+
+            if(q2>0)
+            {
+            c.scale(1,-1);
+            c.fillStyle = 'rgba(0, 255, 0, 1)';
+            c.fillRect(150,0,50,50*q2);
+            c.scale(1,-1);
+            c.fillStyle = 'rgba(0, 0, 0, 0.5)';
+            c.font = "12px Arial";
+            c.fillText("Question2",150,0);
+            }
+            else{
+            c.scale(1,-1);
+            c.fillStyle = 'rgba(255, 0, 0, 1)';
+            c.fillRect(150,0,50,50);
+            c.scale(1,-1);
+            c.fillStyle = 'rgba(0, 0, 0, 0.5)';
+            c.font = "12px Arial";
+            c.fillText("Question2",150,0);
+            }
+
+            if(q3>0)
+            {
+            c.scale(1,-1);
+            c.fillStyle = 'rgba(0, 255, 0, 1)';
+            c.fillRect(250,0,50,50*q3);
+            c.scale(1,-1);
+            c.fillStyle = 'rgba(0, 0, 0, 0.5)';
+            c.font = "12px Arial";
+            c.fillText("Question3",250,0);
+            }
+            else{
+            c.scale(1,-1);
+            c.fillStyle = 'rgba(255, 0, 0, 1)';
+            c.fillRect(250,0,50,50);
+            c.scale(1,-1);
+            c.fillStyle = 'rgba(0, 0, 0, 0.5)';
+            c.font = "12px Arial";
+            c.fillText("Question3",250,0);
+            }
+
+        </script>
+
+    </section>
+
+    {% include 'footer.html' %}
+
+    <script src="{{ url_for('static', filename='/bst/bootstrap.bundle.min.js')}}"></script>
+
+</body>
+</html>

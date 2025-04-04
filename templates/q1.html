@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="{{ url_for('static', filename='bst/bootstrap.min.css')}}" rel="stylesheet" />
+        <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet" />
+    </head>  
+<body>
+
+<!-- question1 area -->
+
+    {% include 'navigation.html' %}
+
+    <section class="containerOne">
+
+        <h1>Question One</h1>
+        <p>Why is cat afraid of climbing the Christmas tree?</p>
+
+        <ul>
+            <li><a href="/q1w/">It wants to study the greenery</a></li>
+            <li><a href="/q1w/">It wants to fly</a></li>
+            <li><a href="/q1w/">It is not a cat it is a dog</a></li>
+            <li><a href="/q1a/">It is afraid of bark</a></li>
+        <ul>
+
+    </section>
+
+    {% include 'footer.html' %}
+
+    <script src="{{ url_for('static', filename='/bst/bootstrap.bundle.min.js')}}"></script>
+</body>
+</html>

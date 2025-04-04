@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="{{ url_for('static', filename='bst/bootstrap.min.css')}}" rel="stylesheet" />
+        <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet" />
+    </head>  
+<body>
+
+
+    <!-- question1 wrong area -->
+
+    {% include 'navigation.html' %}
+
+    <section class="containerOne">
+
+        <h1>Wrong Answer</h1>
+
+        <a href="/q2/">Next Question</a>
+
+    </section>
+
+    {% include 'footer.html' %}
+
+    <script src="{{ url_for('static', filename='/bst/bootstrap.bundle.min.js')}}"></script>
+</body>
+</html>

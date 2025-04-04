@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="{{ url_for('static', filename='bst/bootstrap.min.css')}}" rel="stylesheet" />
+        <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet" />
+    </head>  
+<body>
+
+    <!-- question2 area -->
+
+    {% include 'navigation.html' %}
+
+    <section class="containerOne">
+
+
+        <h1>Question Two</h1>
+        <p>What do you call it when Santa claps his hands?</p>
+
+        <ul>
+            <li><a href="/q2w/">He is hungry</a></li>
+            <li><a href="/q2w/">Snow is comming</a></li>
+            <li><a href="/q2a/">Santapplause</a></li>
+            <li><a href="/q2w/">It is time for holidays</a></li>
+        <ul>
+
+    </section>
+
+    {% include 'footer.html' %}
+
+    <script src="{{ url_for('static', filename='/bst/bootstrap.bundle.min.js')}}"></script>
+</body>
+</html>

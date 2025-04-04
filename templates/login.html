@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link href="{{ url_for('static', filename='bst/bootstrap.min.css')}}" rel="stylesheet" />
+        <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet" />
+        
+    </head>    
+<body>
+
+    <!-- login area -->
+
+    {% include 'navigation.html' %}
+
+    <section class="containerOne">
+
+        <form action="" method="POST" name="loginForm">
+            <label for="username">Provide Username:</label>
+            <input type="text" name="username" id="username"/>
+            <br><br><label for="password">Provide Password:</label>
+            <input type="password" name="password" id="password"/>
+            <br><br>
+            <input type="submit" name="submit" id="submit"/>
+        </form>
+        <br><br>
+        <p>{{message}}</p>
+
+        <p><a href="/register">If you don not have an account Please Register HERE!</a></p>
+
+        <br><br>
+
+        <p><a href="/">Back To Start</a></p>
+
+    </section>
+
+    {% include 'footer.html' %}
+
+    <script src="{{ url_for('static', filename='/bst/bootstrap.bundle.min.js')}}"></script>
+</body></html>
