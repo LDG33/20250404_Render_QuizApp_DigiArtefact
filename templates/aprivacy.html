@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link href="{{ url_for('static', filename='bst/bootstrap.min.css')}}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet" />
+
+
+
+</head>
+<body>
+    <!--Home Page-->
+
+    {% include 'navigation.html' %}
+
+    <div class="mainField"> 
+
+    <section class="containerOne">
+    
+        <h1>Privacy Policy</h1>
+        <p>
+            QuizApp, is committed 
+            to protect your privacy and ensuring that your personal information is handled securely and responsibly. This Privacy Policy outlines how we collect, use, store,
+             and share information when you visit QuizApp.
+        </p>
+        <p>
+            <b>Information QuizApp Collects</b> <br>
+            QuizApp only collects your login and password. Details regarding your quiz score are not stored anywhere.
+        </p>
+        <p>
+            <b>Where QuizApp uses this information</b> <br>
+            This information is used only to let you in to the current session so QuizApp knows how many people
+            registered and how many times. 
+        </p>
+        <p>
+            No information is shared with anyone. You as a user have the right to: 
+            Access, update, or delete your personal information.
+            Opt out of email marketing and certain data collection practices.
+            Request details about how your data is stored and used.
+        </p>
+
+    </section>
+
+    </div>
+
+     {% include 'footer.html' %}
+
+    <script src="{{ url_for('static', filename='/bst/bootstrap.bundle.min.js')}}"></script>
+</body></html>

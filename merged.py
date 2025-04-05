@@ -29,6 +29,19 @@ def about():
 def contact():
         return render_template('contact.html')
 
+@app.route("/faq")
+def faq():
+        return render_template('FAQ.html')
+
+@app.route("/aprivacy")
+def aprivacy():
+        return render_template('aprivacy.html')
+
+@app.route("/attribution")
+def attribution():
+        return render_template('attribution.html')
+
+
 #connection to database <- OLD VERSION !!!!!! (today 20250328)
 #def get_db():
     #db = getattr(g, 'db', None)

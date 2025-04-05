@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link href="{{ url_for('static', filename='bst/bootstrap.min.css')}}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet" />
+
+
+
+</head>
+<body>
+    <!--Home Page-->
+
+    {% include 'navigation.html' %}
+
+    <div class="mainField"> 
+
+    <section class="containerOne">
+    
+        <h1>Attribution of Assets used in this project</h1>
+
+        <p>1) For the pupose of this project a background image from Freepik 
+            has been used (author: Kjpargeter) - please see the link below:</p>
+        <p><a href="http://www.freepik.com">Designed by Kjpargeter / Freepik</a></p>
+            <br><br>
+        
+        <p>2) Several icons have been used from Bootstrap website under the license: 
+            "Code licensed MIT, docs CC BY 3.0." 
+            <br>
+            Assets and code have been downloaded from: 
+        </p>
+        <p><a href="https://getbootstrap.com/"> getbootstrap.com </a></p>
+
+    </section>
+
+    </div>
+
+     {% include 'footer.html' %}
+
+    <script src="{{ url_for('static', filename='/bst/bootstrap.bundle.min.js')}}"></script>
+</body></html>

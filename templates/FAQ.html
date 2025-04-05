@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link href="{{ url_for('static', filename='bst/bootstrap.min.css')}}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet" />
+
+
+
+</head>
+<body>
+    <!--FAQ-->
+
+    {% include 'navigation.html' %}
+
+    <div class="mainField"> 
+
+    <section class="containerOne">
+    
+        <h1>QuizApp FAQ</h1>
+        <br>
+        <p><b>1) What is the purpose of this website?</b> To demonstrate a relevant skills in Python/Flask technology 
+            in an entertaining (Christmas Quiz) and interesting approach. Part of Advance Web Technologies module.
+        </p>
+        <p><b>2) Who is the author of this webiste?</b> Lukasz Galik (me) is the author of this website.
+            I am a student of Web Design and Developement at Edinburgh Napier University. </p>
+
+        <p>
+            <b>3) What is the technology used in this project?</b> The technology is: Python, Flask, SQL, JavaScript and 
+            HTML canvas.
+        </p>
+
+    </section>
+
+    </div>
+
+     {% include 'footer.html' %}
+
+    <script src="{{ url_for('static', filename='/bst/bootstrap.bundle.min.js')}}"></script>
+</body></html>
